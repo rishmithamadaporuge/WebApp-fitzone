@@ -1,0 +1,501 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e2dfdf, #efeaea);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 85%;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  max-width: 1100px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30%;
+  background-image: url(image/home/bg8.jpg);
+  background-color: #000;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+.username {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #ff0336;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+  color: #fff;
+}
+
+.sidebar nav ul li img {
+  margin-top: 50px;
+  width: 100px;
+  height: auto;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 50px;
+  background-color: #fdfdfd;
+  border-radius: 0px 16px 16px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Profile and Events Box */
+.profile-form,
+.events-form {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-form-2,
+.events-form-2 {
+  width: 48%;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-form-3,
+.events-form-3 {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-form:hover,
+.events-form:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #ff0336;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #777;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="select"],
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #aaa;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+  border-color: #ff0336;
+  box-shadow: 0 4px 8px rgba(255, 101, 132, 0.2);
+}
+
+button {
+  background-color: #ff0336;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #ff0336;
+  border: 1px solid #ff0336;
+}
+
+/* Save Button */
+.save-btn {
+  background-color: #ff0336;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 30px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+}
+
+.save-btn:hover {
+  background-color: transparent;
+  color: #ff0336;
+  border: 1px solid #ff0336;
+}
+/* Form Group Container */
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* Label Styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #777;
+  font-weight: 500;
+}
+
+/* Select Box Styling */
+select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  font-size: 15px;
+  appearance: none; /* Removes the default dropdown arrow */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNzc3NzciIHZpZXdCb3g9IjAgMCAxMiAxMiIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjI5IDEuNzFMMi44NiAyLjkzIDYgNi4wNmMyLjI2LTIuNjMgMy0zLjI3IDYuMTQtNi41Mkw5LjE0IDIuOTJjMS44NC0xLjgyIDMtMi44MiA0LjE4LTIuODJzMi4zMyAxLjk0IDMuMSA0LjM4Yy4yOCAxLjcyLjI4IDMgMC41MSA1LjczYy0uNTcgMS43Ny0uMzMgMi41NC0xLjAxIDQuOTdsLTEuMDUgNC4xOXYtMTAuOGMtMS4zNC0xLjM0LTQuMTQtMi40NC03LjE5LTIuNzhsLS4wOC0uODJ6Ii8+PC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focused Select Box */
+select:focus {
+  border-color: #ff6584;
+  box-shadow: 0 4px 8px rgba(255, 101, 132, 0.2);
+  outline: none;
+}
+
+/* Option Styling */
+option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Hover Effect for Options */
+option:hover {
+  background-color: #ff6584;
+  color: white;
+}
+
+/* Section Headings */
+#messageSection section h2 {
+  color: #ff0336;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Form Inputs */
+#messageSection section form input[type="text"],
+#messageSection section form input[type="date"],
+#messageSection section form input[type="time"],
+#messageSection section form textarea,
+#messageSection section form select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+#messageSection section form input[type="text"]:focus,
+#messageSection section form input[type="date"]:focus,
+#messageSection section form input[type="time"]:focus,
+#messageSection section form textarea:focus,
+#messageSection section form select:focus {
+  border-color: #ff0336;
+  outline: none;
+}
+
+/* Buttons */
+#messageSection section form button {
+  background-color: #ff0336;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+#messageSection section form button:hover {
+  background-color: transparent;
+  color: #ff0336;
+  border: 1px solid #ff0336;
+}
+
+/* Table Styling */
+#messageSection section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#messageSection section table th,
+#messageSection section table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#messageSection section table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #000;
+}
+
+#messageSection section table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Table Button within Table Cells */
+#messageSection section table td form button {
+  padding: 5px 10px;
+  font-size: 12px;
+  width: auto; /* Only use necessary width */
+  display: inline-block;
+}
+
+#messageSection section table td form select {
+  padding: 5px;
+  font-size: 12px;
+}
+
+/* Section styles */
+#messageSection section {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* Table styles */
+#messageSection table {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+#messageSection th,
+#messageSection td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#messageSection th {
+  background-color: #f2f2f2;
+}
+
+/* Button styles */
+#messageSection button {
+  background-color: #ff0336; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#messageSection button:hover {
+  background-color: #ff0336; /* Darker green */
+}
+
+/* Textarea styles */
+#messageSection textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing */
+  margin-top: 10px;
+}
+
+/*   === blog Section Styling Starts ===   */
+section.blog {
+  width: 100%;
+  padding: 80px 8% 60px;
+}
+.blog .blog-contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.blog-contents .article-card {
+  border: 1px solid;
+  border-color: #000;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.blog-contents .article-card:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.blog-contents .article-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+.blog-contents .article-card .category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+.article-card .category .subject {
+  padding: 6px 10px;
+  background-color: var(--background-clr);
+  border-radius: 5px;
+}
+.article-card .category .subject h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-clr);
+}
+.article-card .category span {
+  color: var(--dark-text-clr);
+}
+.article-card .article-title {
+  font-size: 20px;
+  color: var(--dark-heading-clr);
+}
+.article-card .article-desc {
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--dark-text-clr);
+  margin: 10px 0px;
+}
+.article-card .article-views {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px 0px 5px;
+  border-top: 1px solid #ddd;
+}
+.article-card .article-views span {
+  color: var(--dark-text-clr);
+}
+.blog .view-more-btn-container {
+  margin-top: 30px;
+  text-align: center;
+}
+/*   === blog Section Styling Ends ===   */
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
