@@ -44,7 +44,7 @@ $conn->close();
 
     <!-- Appointments Section -->
     <section>
-        <h2>appointments</h2>
+        <h2>Your Appointments</h2>
         <table>
             <tr>
                 <th>Date</th>
