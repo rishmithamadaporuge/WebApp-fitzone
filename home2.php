@@ -122,7 +122,7 @@ if (isset($_POST['submit_query'])) {
               your body and mind. Stronger every day, fueled by effort and a
               commitment to greatness
             </p>
-            <button class="btn read-more-btn">Read More</button>
+            <!-- <button class="btn read-more-btn">Read More</button> -->
           </div>
         </div>
         <!--   === Banner Ends ===   -->
