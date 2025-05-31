@@ -990,7 +990,7 @@ section.page-footer {
   }
 
   .banner .banner-contents h2 {
-    font-size: 20px;
+    display: none;
   }
   .banner .banner-contents h1 {
     font-size: 40px;
