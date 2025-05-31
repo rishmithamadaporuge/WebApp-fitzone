@@ -984,16 +984,17 @@ section.page-footer {
   .home .banner .banner-contents {
     margin-top: 100px;
   }
-
   .join-us-btn-wrapper {
     display: none;
   }
-
   .banner .banner-contents h2 {
     display: none;
   }
   .banner .banner-contents h1 {
     font-size: 40px;
+  }
+  .banner .banner-contents .read-more-btn {
+    margin-bottom: 100px;
   }
   /* Facilities Section */
   .facilities .facilities-contents {
