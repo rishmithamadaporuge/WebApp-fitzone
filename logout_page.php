@@ -3,9 +3,15 @@
 @include 'config.php';
 
 session_start();
-session_unset();
+
+// Optional: store the username if needed before destroying session
+$_SESSION['logout_message'] = "You have been logged out successfully.";
+
+// Destroy the session
 session_destroy();
 
-header('location:index.html');
+// Redirect to the login page
+header("Location: login_page.php");
+exit;
 
 ?>

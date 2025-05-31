@@ -20,6 +20,26 @@ html {
 
 /*   === Reusable Code Starts ===   */
 
+.popupBtn {
+  background-color: #ff0336;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.popupBtn:hover {
+  background-color: transparent;
+  color: #ff0336;
+  border: 1px solid #ff0336;
+}
+
 button.btn {
   padding: 10px 25px;
   background-color: var(--primary-clr);
@@ -824,15 +844,15 @@ section.page-footer {
 .copy-rights p b {
   color: var(--primary-clr);
 }
+
 /*   === Footer Section Styling Ends ===   */
 
 /*   === Media Query Starts ===   */
-/* @media (min-width: 1400px) { */
-/* Navbar */
-/* .home.active .main-navbar { */
-/* left: calc(calc(100% - 1400px) / 2); */
-/* } */
-/* } */
+@media (min-width: 1400px) {
+  Navbar .home.active .main-navbar {
+    left: calc(calc(100% - 1400px) / 2);
+  }
+}
 
 @media (max-width: 968px) {
   /* Home Section */

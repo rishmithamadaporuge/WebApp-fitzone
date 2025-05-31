@@ -9,6 +9,12 @@ $session_email = $_SESSION['email'];
 $select_user_details = " SELECT * FROM user_details WHERE email = '$session_email' ";
 $result_user_details = mysqli_query($conn, $select_user_details);
 
+$loginMessage = '';
+if (isset($_SESSION['login_success'])) {
+    $loginMessage = $_SESSION['login_success'];
+    unset($_SESSION['login_success']); // show message only once
+}
+
 if(mysqli_num_rows($result_user_details) > 0){
 
    $row = mysqli_fetch_array($result_user_details);
@@ -530,6 +536,29 @@ if ($result->num_rows > 0) {
             </section>
 
         </div>
+
+            <?php if (!empty($loginMessage)) : ?>
+  <div id="loginModal" style="
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+  ">
+    <div style="
+        background: white;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #000;
+        text-align: center;
+    ">
+      <h2><?php echo $loginMessage; ?></h2>
+      <button onclick="document.getElementById('loginModal').style.display='none'">OK</button>
+    </div>
+  </div>
+<?php endif; ?>
 
     </body>
 </html>

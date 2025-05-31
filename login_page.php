@@ -4,6 +4,12 @@
 
 session_start();
 
+$logoutMessage = '';
+if (isset($_SESSION['logout_message'])) {
+    $logoutMessage = $_SESSION['logout_message'];
+    unset($_SESSION['logout_message']); // Show it only once
+}
+
 if(isset($_POST['submit'])){
 
    $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -19,6 +25,7 @@ if(isset($_POST['submit'])){
 
       $_SESSION['user_name'] = $row['name'];
       $_SESSION['email'] = $row['email'];
+      $_SESSION['login_success'] = "Welcome, " . $row['name'] . "!";
 
       if($row['user_type'] == 'manager'){
          header('location:manager_page.php');
@@ -32,6 +39,7 @@ if(isset($_POST['submit'])){
       $error[] = 'incorrect email or password!';
    }
 }
+
 
 ?>
 <html>
@@ -61,6 +69,30 @@ if(isset($_POST['submit'])){
       <p>Don't have an account? <a href="register_page.php">register now</a></p>
    </form>
 </div>
+
+<?php if (!empty($logoutMessage)) : ?>
+  <div id="logoutModal" style="
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+  ">
+    <div style="
+        background: white;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #000;
+        text-align: center;
+    ">
+      <h2><?php echo $logoutMessage; ?></h2>
+      <button onclick="document.getElementById('logoutModal').style.display='none'">OK</button>
+    </div>
+  </div>
+<?php endif; ?>
+
 
 </body>
 </html>
