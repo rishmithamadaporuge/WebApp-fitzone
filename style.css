@@ -848,21 +848,168 @@ section.page-footer {
 /*   === Footer Section Styling Ends ===   */
 
 /*   === Media Query Starts ===   */
-@media (max-width: 768px) {
-  .facilities .facilities-contents {
-    grid-template-columns: 1fr;
+@media (min-width: 1400px) {
+  Navbar .home.active .main-navbar {
+    left: calc(calc(100% - 1400px) / 2);
   }
+}
 
-  .about .about-contents {
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
+@media (max-width: 968px) {
+  /* Home Section */
+  .main-navbar .nav-list li {
+    margin: 0px 10px;
   }
-
-  .home .main-navbar .nav-list {
-    display: none; /* Or stack vertically if using hamburger menu */
+  /* Team Section */
+  .our-team .team-contents {
+    max-width: 650px;
+    grid-template-columns: repeat(2, 1fr);
   }
+  /* Pricing Section */
+  .pricing .pricing-contents {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* blog Section */
+  .blog .blog-contents {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+@media (max-width: 868px) {
+  /* Home Section */
   .home .main-navbar .hamburger-btn {
     display: block;
+    margin-left: 30px;
+    z-index: 101;
+  }
+  .home .main-navbar .nav-list {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    /*right: 0;*/
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-bg-clr);
+    transition: right 0.3s;
+    z-index: 100;
+  }
+  .home .main-navbar .nav-list.active {
+    right: 0;
+  }
+  .main-navbar .nav-list li {
+    margin: 25px 0px 0px;
+  }
+  .main-navbar .nav-list li:nth-child(1) {
+    margin-top: 180px;
+  }
+  .main-navbar .nav-list li a {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .home .main-navbar .join-us-btn-wrapper {
+    margin-left: auto;
+  }
+  .main-navbar .hamburger-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .main-navbar .hamburger-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .main-navbar .hamburger-btn.active span:nth-child(2) {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  /* Facilities Section */
+  .facilities .facilities-contents {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px 20px;
+  }
+  /* About Section */
+  .about .about-contents {
+    grid-template-columns: 1fr;
+    grid-gap: 25px 0px;
+  }
+  .about-contents .about-left-col {
+    max-height: 500px;
+  }
+  .about-contents .about-right-col h1 {
+    font-size: 32px;
+  }
+  .about-right-col .about-states .about-state {
+    flex-basis: 100%;
+  }
+  /* Services Section */
+  .services-contents .service-box {
+    flex-direction: column;
+  }
+  .service-box .service-icon-box {
+    align-self: center;
+  }
+  .service-box .service-desc {
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  /* footer Section */
+  .page-footer .footer-contents {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 668px) {
+  /* Services Section */
+  .services .services-contents {
+    grid-template-columns: 1fr;
+  }
+  /* Team Section */
+  .our-team .team-contents {
+    max-width: 300px;
+    grid-template-columns: 1fr;
+    grid-gap: 20px 0px;
+  }
+  /* Pricing Section */
+  .pricing .pricing-contents {
+    grid-template-columns: 1fr;
+  }
+  /* blog Section */
+  .blog .blog-contents {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 568px) {
+  /* Home Section */
+  .home .banner .banner-contents {
+    margin-top: 20px;
+  }
+
+  .join-us-btn-wrapper {
+    display: none;
+  }
+
+  .banner .banner-contents h2 {
+    font-size: 20px;
+  }
+  .banner .banner-contents h1 {
+    font-size: 40px;
+  }
+  /* Facilities Section */
+  .facilities .facilities-contents {
+    grid-template-columns: 1fr;
+    grid-gap: 25px 0px;
+  }
+  /* About Section */
+  .about-contents .about-right-col .about-states {
+    flex-direction: column;
+  }
+  .about-states .about-state-1 {
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+  /* Sections Heading */
+  section .section-header h1 {
+    font-size: 32px;
   }
 }
