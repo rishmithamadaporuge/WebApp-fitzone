@@ -982,7 +982,7 @@ section.page-footer {
 @media (max-width: 568px) {
   /* Home Section */
   .home .banner .banner-contents {
-    margin-top: 100px;
+    margin-top: 75px;
   }
   .join-us-btn-wrapper {
     display: none;
@@ -994,7 +994,7 @@ section.page-footer {
     font-size: 40px;
   }
   .banner .banner-contents .read-more-btn {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
   /* Facilities Section */
   .facilities .facilities-contents {
