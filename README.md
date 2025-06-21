@@ -1,6 +1,6 @@
 # FitZone Fitness Center Web Application
 
-![FitZone Logo](path/to/logo.png)
+![FitZone Logo](image/home/FitZone Logo PNG.png)
 
 A comprehensive web application built for **FitZone Fitness Center** in Kurunegala to promote fitness services, manage memberships, and provide class schedules. This app is designed to help attract new members, streamline management tasks, and engage users with valuable fitness content.
 
